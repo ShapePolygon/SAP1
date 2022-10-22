@@ -7,12 +7,11 @@ SW[9] and SW[8] are used to set the mode, specifically:
    if mode = 0 : read data from RAM by specifying the address via SW[7:0],
         the seven-segments will display Axxdyy where xx is the address 
         and yy is the data read from RAM
-   if mode = 1 : write data to RAM with the specified address previously
-        assigned during mode = 0, data is still specified via SW[7:0],
-        the seven-segments will display Axxdyy where xx is the address 
-        and yy is the data read from RAM. Data will be written to RAM if
-        KEY[0] is pressed and the display should reflect the written value
-        to yy.
+   if mode = 1 : write data to RAM with the specified address previously assigned during mode = 0. 
+        Data is still specified via SW[7:0], the seven-segments will display Axxdyy 
+        where xx is the address and yy is the data read from RAM. 
+        Data will be written to RAM if KEY[0] is pressed. 
+        The display should reflect the written value to yy.
 	
    NOTE: LEDR[9:7] displays the value of CE, WE, and OE in their inverted 
         active state. Thus if CE and WE are both zeroes (write mode),
