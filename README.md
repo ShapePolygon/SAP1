@@ -1,36 +1,43 @@
+# Description
 A Verilog implementation of SAP1 that can execute and display SAP1 programs from an external 8x8 RAM.
 Switches are used to program the external RAM and to display internal registers.
 
-Device Operation:
-SW[9] and SW[8] are used to set the mode, specifically:
-   mode = {SW[9], SW[8]}
-   if mode = 0 : read data from RAM by specifying the address via SW[7:0],
-        the seven-segments will display Axxdyy where xx is the address 
-        and yy is the data read from RAM
-   if mode = 1 : write data to RAM with the specified address previously
-        assigned during mode = 0, data is still specified via SW[7:0],
-        the seven-segments will display Axxdyy where xx is the address 
-        and yy is the data read from RAM. Data will be written to RAM if
-        KEY[0] is pressed and the display should reflect the written value
-        to yy.
+### Device Operation
+SW[9] and SW[8] are used to set the mode, specifically:  
+   `mode = {SW[9], SW[8]}`  
+   
+   if `mode = 0` : Read mode  
+  Read data from RAM by specifying the address via SW[7:0].  
+  The seven-segments will display `Axxdyy` where `xx` is the address and `yy` is the data read from RAM.
+  
+   if `mode = 1` : Write mode  
+  Write data to RAM with the specified address previously assigned during mode = 0.  
+  Data is still specified via SW[7:0],  
+    the seven-segments will display `Axxdyy` where `xx` is the address and `yy` is the data read from RAM.  
+  Data will be written to RAM if KEY[0] is pressed and the display should reflect the written value to `yy`.
 	
-   NOTE: LEDR[9:7] displays the value of CE, WE, and OE in their inverted 
-        active state. Thus if CE and WE are both zeroes (write mode),
-        LEDR[9] and LEDR[8] should be lit. If CE and OE are active (read mdoe),
-        LEDR[9] and LEDR[7] should be lit with LEDR[8] turned off.
+  **NOTE**: `LEDR[9:7]` displays the value of `CE`, `WE, and `OE` in their inverted active state.  
+    Thus if CE and WE are both zeroes (write mode), LEDR[9] and LEDR[8] should be lit.  
+    If CE and OE are active (read mdoe), LEDR[9] and LEDR[7] should be lit with LEDR[8] turned off.  
 
-   if mode = 2 : SAP 1 mode. Reads the program in RAM. At every program start,
-        a clear signal should be supplied via KEY[3]. Pressing KEY[3] should 
-        reset all registers to zero and T state to 1.
-        T states are displayed via LEDs emulating a progress bar
-        (i.e. if T state = 1, LEDR[5:0] = 000001,
-              if T state = 2, LEDR[5:0] = 000011,
-              if T state = 3, LEDR[5:0] = 000111, and so on).
-	Registers values can be displayed individually using SW[7:0], specifically,
-              display the registers if SW[9:0] is:
-              0 (PC) : PC-xx   1 (MAR): Ar-xx   2 (MDR): dr-xx
- 	      3 (IR) : ir-xx   4 (A)  : A-xx    5 (TMP): t-xx
- 	      6 (OUT): o-xx
+   if `mode = 2` : SAP 1 mode.  
+  Reads the program in RAM.  
+  At every program start, a clear signal should be supplied via KEY[3].  
+  Pressing KEY[3] should reset all registers to zero and T state to 1.  
+    T states are displayed via LEDs emulating a progress bar  
+    (i.e. if T state = 1, LEDR[5:0] = 000001,  
+      if T state = 2, LEDR[5:0] = 000011,  
+      if T state = 3, LEDR[5:0] = 000111, and so on).  
+  Registers values can be displayed individually using SW[7:0], specifically,  
+    display the registers if SW[9:0] is:
+    
+              - 0 (PC) : PC-xx   
+	      - 1 (MAR): Ar-xx   
+	      - 2 (MDR): dr-xx
+ 	      - 3 (IR) : ir-xx   
+	      - 4 (A)  : A-xx    
+	      - 5 (TMP): t-xx
+ 	      - 6 (OUT): o-xx
    if mode = 3 : Clock select mode. Select a clock to drive SAP 1. By default, manual
         clock is supplied via KEY[0]. The supplied clock is active with mode = 2 and 3.
         Clear is also active during this mode via KEY[3].
