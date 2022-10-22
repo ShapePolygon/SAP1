@@ -1,0 +1,960 @@
+Analysis & Synthesis report for Top
+Sat Oct 22 02:10:38 2022
+Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[0].item
+ 13. Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[1].item
+ 14. Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[2].item
+ 15. Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[3].item
+ 16. Parameter Settings for User Entity Instance: ClockManager:cm|UpDownCounter:counter
+ 17. Port Connectivity Checks: "RAM_Controller:rc"
+ 18. Port Connectivity Checks: "SAP1:sap|DREgister:Out"
+ 19. Port Connectivity Checks: "SAP1:sap|DREgister:tmp"
+ 20. Port Connectivity Checks: "SAP1:sap|DREgister:Areg"
+ 21. Port Connectivity Checks: "SAP1:sap|DREgister:Ir"
+ 22. Port Connectivity Checks: "SAP1:sap|DREgister:Mdr"
+ 23. Port Connectivity Checks: "SAP1:sap|DREgister:Mar"
+ 24. Port Connectivity Checks: "SAP1:sap|RAM_Controller:rc"
+ 25. Port Connectivity Checks: "SAP1:sap"
+ 26. Port Connectivity Checks: "InputManager:im"
+ 27. Port Connectivity Checks: "DisplayManager:dm|Bit2Led:leds3"
+ 28. Port Connectivity Checks: "DisplayManager:dm|Bin2LedFill:leds"
+ 29. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h5"
+ 30. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h4"
+ 31. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h3"
+ 32. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h2"
+ 33. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h1"
+ 34. Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h0"
+ 35. Port Connectivity Checks: "DisplayManager:dm"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Oct 22 02:10:38 2022           ;
+; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Standard Edition ;
+; Revision Name                   ; Top                                             ;
+; Top-level Entity Name           ; Top                                             ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 200                                             ;
+; Total pins                      ; 86                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; Top                ; Top                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation                             ; All                ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                               ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                 ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+; Top.v                            ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Top.v            ;         ;
+; SAP1.v                           ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/SAP1.v           ;         ;
+; DisplayManager.v                 ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v ;         ;
+; InputManager.v                   ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/InputManager.v   ;         ;
+; ClockManager.v                   ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/ClockManager.v   ;         ;
+; RAM_Controller.v                 ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v ;         ;
+; RAM_Manager.v                    ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v    ;         ;
+; Bin2HexEx.v                      ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v      ;         ;
+; Bit2Led.v                        ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Bit2Led.v        ;         ;
+; Bin2LedFill.v                    ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Bin2LedFill.v    ;         ;
+; DRegister.v                      ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/DRegister.v      ;         ;
+; Counter.v                        ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Counter.v        ;         ;
+; Clock100ms.v                     ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/Clock100ms.v     ;         ;
+; UpDownCounter.v                  ; yes             ; User Verilog HDL File  ; D:/Decagon/_PC/Desktop/SAP1/UpDownCounter.v  ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 255       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 434       ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 66        ;
+;     -- 5 input functions                    ; 71        ;
+;     -- 4 input functions                    ; 34        ;
+;     -- <=3 input functions                  ; 259       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 200       ;
+;                                             ;           ;
+; I/O pins                                    ; 86        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 132       ;
+; Total fan-out                               ; 2346      ;
+; Average fan-out                             ; 2.88      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Entity Name    ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------+----------------+--------------+
+; |Top                              ; 434 (0)             ; 200 (0)                   ; 0                 ; 0          ; 86   ; 0            ; |Top                                           ; Top            ; work         ;
+;    |ClockManager:cm|              ; 173 (8)             ; 136 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm                           ; ClockManager   ; work         ;
+;       |Clock100ms:clkGen[0].item| ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm|Clock100ms:clkGen[0].item ; Clock100ms     ; work         ;
+;       |Clock100ms:clkGen[1].item| ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm|Clock100ms:clkGen[1].item ; Clock100ms     ; work         ;
+;       |Clock100ms:clkGen[2].item| ; 41 (41)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm|Clock100ms:clkGen[2].item ; Clock100ms     ; work         ;
+;       |Clock100ms:clkGen[3].item| ; 40 (40)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm|Clock100ms:clkGen[3].item ; Clock100ms     ; work         ;
+;       |UpDownCounter:counter|     ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|ClockManager:cm|UpDownCounter:counter     ; UpDownCounter  ; work         ;
+;    |DisplayManager:dm|            ; 83 (48)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm                         ; DisplayManager ; work         ;
+;       |Bin2HexEx:h0|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2HexEx:h0            ; Bin2HexEx      ; work         ;
+;       |Bin2HexEx:h1|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2HexEx:h1            ; Bin2HexEx      ; work         ;
+;       |Bin2HexEx:h3|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2HexEx:h3            ; Bin2HexEx      ; work         ;
+;       |Bin2HexEx:h4|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2HexEx:h4            ; Bin2HexEx      ; work         ;
+;       |Bin2HexEx:h5|              ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2HexEx:h5            ; Bin2HexEx      ; work         ;
+;       |Bin2LedFill:leds|          ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|DisplayManager:dm|Bin2LedFill:leds        ; Bin2LedFill    ; work         ;
+;    |InputManager:im|              ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|InputManager:im                           ; InputManager   ; work         ;
+;    |RAM_Controller:rc|            ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|RAM_Controller:rc                         ; RAM_Controller ; work         ;
+;    |RAM_Manager:rm|               ; 36 (36)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|RAM_Manager:rm                            ; RAM_Manager    ; work         ;
+;    |SAP1:sap|                     ; 118 (110)           ; 64 (8)                    ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap                                  ; SAP1           ; work         ;
+;       |Counter:Pc|                ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|Counter:Pc                       ; Counter        ; work         ;
+;       |DREgister:Areg|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:Areg                   ; DREgister      ; work         ;
+;       |DREgister:Ir|              ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:Ir                     ; DREgister      ; work         ;
+;       |DREgister:Mar|             ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:Mar                    ; DREgister      ; work         ;
+;       |DREgister:Mdr|             ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:Mdr                    ; DREgister      ; work         ;
+;       |DREgister:Out|             ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:Out                    ; DREgister      ; work         ;
+;       |DREgister:tmp|             ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Top|SAP1:sap|DREgister:tmp                    ; DREgister      ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                      ;
++-----------------------------------------------------+---------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal       ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------------+------------------------+
+; RAM_Controller:rc|A[0]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[0]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[1]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[1]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[2]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[2]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[3]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[3]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[4]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[4]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[5]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[5]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[6]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[6]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|A[7]                              ; RAM_Controller:rc|always0 ; yes                    ;
+; SAP1:sap|userInput[7]                               ; SAP1:sap|userInput[7]     ; yes                    ;
+; RAM_Controller:rc|WE                                ; SW_input[9]               ; yes                    ;
+; RAM_Controller:rc|OE                                ; SW_input[9]               ; yes                    ;
+; DisplayManager:dm|HEX0_data[4]                      ; VCC                       ; yes                    ;
+; DisplayManager:dm|HEX1_data[4]                      ; VCC                       ; yes                    ;
+; DisplayManager:dm|HEX3_data[4]                      ; VCC                       ; yes                    ;
+; DisplayManager:dm|HEX4_data[4]                      ; VCC                       ; yes                    ;
+; InputManager:im|subMode3                            ; RAM_Manager:rm|Equal0     ; yes                    ;
+; DisplayManager:dm|HEX5_data[0]                      ; VCC                       ; yes                    ;
+; InputManager:im|subMode0                            ; GND                       ; yes                    ;
+; SAP1:sap|isHalted                                   ; SAP1:sap|isHalted         ; yes                    ;
+; SAP1:sap|IR_H[0]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; SAP1:sap|IR_H[1]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; SAP1:sap|IR_H[2]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; SAP1:sap|IR_H[3]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; SAP1:sap|bus[0]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|Lout                                       ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|La                                         ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|Ltmp                                       ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|Lir                                        ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|Lm                                         ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|Lmdr                                       ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|Cp                                         ; SAP1:sap|La               ; yes                    ;
+; SAP1:sap|bus[3]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[2]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[1]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[4]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[7]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[6]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; SAP1:sap|bus[5]                                     ; SAP1:sap|bus[0]           ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[4]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[5]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[6]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[7]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Controller:rc|data_out[0]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[0]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[0]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; SAP1:sap|IR_L[0]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; RAM_Controller:rc|data_out[3]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[3]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[3]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; SAP1:sap|IR_L[3]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; RAM_Controller:rc|data_out[2]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[2]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[2]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; SAP1:sap|IR_L[2]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; RAM_Controller:rc|data_out[1]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[1]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Manager:rm|data_out_SAP[1]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; SAP1:sap|IR_L[1]                                    ; SAP1:sap|IR_L[0]          ; yes                    ;
+; RAM_Controller:rc|data_out[4]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[4]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Controller:rc|data_out[7]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[7]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Controller:rc|data_out[6]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[6]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; RAM_Controller:rc|data_out[5]                       ; RAM_Controller:rc|always0 ; yes                    ;
+; RAM_Manager:rm|data_out_Con[5]                      ; RAM_Manager:rm|Equal0     ; yes                    ;
+; Number of user-specified and inferred latches = 73  ;                           ;                        ;
++-----------------------------------------------------+---------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 200   ;
+; Number of registers using Synchronous Clear  ; 128   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 68    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; SAP1:sap|TState[0]                     ; 31      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Top|SAP1:sap|TState[3]             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Top|RAM_Manager:rm|data_out[7]     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Top|DisplayManager:dm|HEX3_data[4] ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |Top|DisplayManager:dm|HEX4_data[1] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Top|SAP1:sap|bus[7]                ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; No         ; |Top|SAP1:sap|bus[0]                ;
+; 10:1               ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |Top|DisplayManager:dm|HEX3_data[0] ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Top|DisplayManager:dm|HEX1_data[1] ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Top|DisplayManager:dm|HEX0_data[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[0].item ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; mul            ; 1     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[1].item ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; mul            ; 2     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[2].item ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; mul            ; 3     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockManager:cm|Clock100ms:clkGen[3].item ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; mul            ; 4     ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockManager:cm|UpDownCounter:counter ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; MAX            ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RAM_Controller:rc"                                                                                              ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; dataFromRAM ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:Out" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC             ;
++------+-------+----------+--------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:tmp" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC             ;
++------+-------+----------+--------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:Areg" ;
++------+-------+----------+---------------------------+
+; Port ; Type  ; Severity ; Details                   ;
++------+-------+----------+---------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC              ;
++------+-------+----------+---------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:Ir" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC            ;
++------+-------+----------+-------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:Mdr" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC             ;
++------+-------+----------+--------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|DREgister:Mar" ;
++------+-------+----------+--------------------------+
+; Port ; Type  ; Severity ; Details                  ;
++------+-------+----------+--------------------------+
+; OE   ; Input ; Info     ; Stuck at VCC             ;
++------+-------+----------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap|RAM_Controller:rc"                                                                                                                         ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; mode        ; Input  ; Info     ; Stuck at GND                                                                                                                                 ;
+; flush       ; Input  ; Info     ; Stuck at VCC                                                                                                                                 ;
+; IE          ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; dataFromRAM ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SAP1:sap"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; OUT4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InputManager:im"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; IE[3]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SW_out  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; KEY_out ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bit2Led:leds3"                                                                                                             ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; sel  ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (10 bits) it drives.  Extra input bit(s) "sel[9..3]" will be connected to GND. ;
+; leds ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (3 bits) it drives; bit(s) "leds[9..3]" have no fanouts                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2LedFill:leds"                                                                                                                                              ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; sel  ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; leds ; Output ; Warning  ; Output or bidir port (10 bits) is wider than the port expression (6 bits) it drives; bit(s) "leds[9..6]" have no fanouts                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h5"                                                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; sel[2] ; Input  ; Info     ; Stuck at GND                                                                                                            ;
+; leds   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h4"                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; leds ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h3"                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; leds ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h2"                                                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                 ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; sel[1] ; Input  ; Info     ; Stuck at GND                                                                                                            ;
+; leds   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h1"                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; leds ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm|Bin2HexEx:h0"                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+; leds ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (7 bits) it drives; bit(s) "leds[7..7]" have no fanouts ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DisplayManager:dm"                                                                                                                                  ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                          ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; clkSpeed ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (5 bits) it drives.  Extra input bit(s) "clkSpeed[4..4]" will be connected to GND. ;
++----------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 200                         ;
+;     CLR               ; 12                          ;
+;     ENA CLR           ; 56                          ;
+;     SCLR              ; 128                         ;
+;     plain             ; 4                           ;
+; arriav_io_obuf        ; 8                           ;
+; arriav_lcell_comb     ; 441                         ;
+;     arith             ; 152                         ;
+;         1 data inputs ; 143                         ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 8                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 285                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 84                          ;
+;         4 data inputs ; 34                          ;
+;         5 data inputs ; 71                          ;
+;         6 data inputs ; 66                          ;
+; boundary_port         ; 86                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.17                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 21.1.1 Build 850 06/23/2022 SJ Standard Edition
+    Info: Processing started: Sat Oct 22 02:10:22 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SAP1 -c Top
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file top.v
+    Info (12023): Found entity 1: Top File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sap1.v
+    Info (12023): Found entity 1: SAP1 File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file displaymanager.v
+    Info (12023): Found entity 1: DisplayManager File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file inputmanager.v
+    Info (12023): Found entity 1: InputManager File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file clockmanager.v
+    Info (12023): Found entity 1: ClockManager File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file ram_controller.v
+    Info (12023): Found entity 1: RAM_Controller File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file ram_manager.v
+    Info (12023): Found entity 1: RAM_Manager File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file bin2hexex.v
+    Info (12023): Found entity 1: Bin2HexEx File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4to1.v
+    Info (12023): Found entity 1: Mux4to1 File: D:/Decagon/_PC/Desktop/SAP1/Mux4to1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file bit2led.v
+    Info (12023): Found entity 1: Bit2Led File: D:/Decagon/_PC/Desktop/SAP1/Bit2Led.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file bin2ledfill.v
+    Info (12023): Found entity 1: Bin2LedFill File: D:/Decagon/_PC/Desktop/SAP1/Bin2LedFill.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file dregister.v
+    Info (12023): Found entity 1: DREgister File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: Counter File: D:/Decagon/_PC/Desktop/SAP1/Counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clock100ms.v
+    Info (12023): Found entity 1: Clock100ms File: D:/Decagon/_PC/Desktop/SAP1/Clock100ms.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file updowncounter.v
+    Info (12023): Found entity 1: UpDownCounter File: D:/Decagon/_PC/Desktop/SAP1/UpDownCounter.v Line: 3
+Info (12127): Elaborating entity "Top" for the top level hierarchy
+Info (12128): Elaborating entity "DisplayManager" for hierarchy "DisplayManager:dm" File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 41
+Info (10041): Inferred latch for "HEX5_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX5_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX5_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX5_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX5_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX4_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX4_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX4_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX4_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX4_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX3_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX3_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX3_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX3_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX3_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX2_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX2_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX2_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX2_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX2_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX1_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX1_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX1_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX1_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX1_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX0_data[0]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX0_data[1]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX0_data[2]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX0_data[3]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (10041): Inferred latch for "HEX0_data[4]" at DisplayManager.v(68) File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Info (12128): Elaborating entity "Bin2HexEx" for hierarchy "DisplayManager:dm|Bin2HexEx:h0" File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 46
+Info (12128): Elaborating entity "Bin2LedFill" for hierarchy "DisplayManager:dm|Bin2LedFill:leds" File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 53
+Info (12128): Elaborating entity "Bit2Led" for hierarchy "DisplayManager:dm|Bit2Led:leds3" File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 54
+Info (12128): Elaborating entity "InputManager" for hierarchy "InputManager:im" File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 44
+Info (10041): Inferred latch for "subMode3" at InputManager.v(46) File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 46
+Info (10041): Inferred latch for "subMode0" at InputManager.v(46) File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 46
+Info (12128): Elaborating entity "SAP1" for hierarchy "SAP1:sap" File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 47
+Warning (10034): Output port "OUT4" at SAP1.v(14) has no driver File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 14
+Info (10041): Inferred latch for "IR_L[0]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_L[1]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_L[2]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_L[3]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_L[4]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_H[0]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_H[1]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_H[2]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_H[3]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "IR_H[4]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[0]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[1]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[2]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[3]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[4]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[5]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[6]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "bus[7]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Lout" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Ltmp" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "La" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Lir" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Lmdr" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Lm" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "Cp" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "isHalted" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[0]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[1]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[2]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[3]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[4]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[5]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[6]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (10041): Inferred latch for "userInput[7]" at SAP1.v(68) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Info (12128): Elaborating entity "RAM_Controller" for hierarchy "SAP1:sap|RAM_Controller:rc" File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 24
+Info (10041): Inferred latch for "dataFromRAM[0]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[1]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[2]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[3]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[4]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[5]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[6]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "dataFromRAM[7]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[0]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[1]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[2]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[3]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[4]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[5]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[6]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "data_out[7]" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "OE" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "WE" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "CE" at RAM_Controller.v(35) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Info (10041): Inferred latch for "A[0]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[1]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[2]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[3]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[4]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[5]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[6]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (10041): Inferred latch for "A[7]" at RAM_Controller.v(28) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Info (12128): Elaborating entity "Counter" for hierarchy "SAP1:sap|Counter:Pc" File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 29
+Info (12128): Elaborating entity "DREgister" for hierarchy "SAP1:sap|DREgister:Mar" File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 30
+Info (12128): Elaborating entity "ClockManager" for hierarchy "ClockManager:cm" File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 49
+Info (12128): Elaborating entity "Clock100ms" for hierarchy "ClockManager:cm|Clock100ms:clkGen[0].item" File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 36
+Info (12128): Elaborating entity "Clock100ms" for hierarchy "ClockManager:cm|Clock100ms:clkGen[1].item" File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 36
+Info (12128): Elaborating entity "Clock100ms" for hierarchy "ClockManager:cm|Clock100ms:clkGen[2].item" File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 36
+Info (12128): Elaborating entity "Clock100ms" for hierarchy "ClockManager:cm|Clock100ms:clkGen[3].item" File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 36
+Info (12128): Elaborating entity "UpDownCounter" for hierarchy "ClockManager:cm|UpDownCounter:counter" File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 42
+Info (12128): Elaborating entity "RAM_Manager" for hierarchy "RAM_Manager:rm" File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 57
+Info (10041): Inferred latch for "data_out_Con[0]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[1]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[2]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[3]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[4]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[5]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[6]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_Con[7]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[0]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[1]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[2]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[3]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[4]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[5]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[6]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Info (10041): Inferred latch for "data_out_SAP[7]" at RAM_Manager.v(43) File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 43
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[0]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[1]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[2]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[3]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[4]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[5]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[6]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (14025): LATCH primitive "SAP1:sap|RAM_Controller:rc|data_out[7]" is permanently disabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 35
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer ClockManager:cm|clkOut File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 18
+    Warning (19017): Found clock multiplexer ClockManager:cm|Mux0 File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 27
+Info (276014): Found 6 instances of uninferred RAM logic
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h5|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h4|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h3|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h2|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h1|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+    Info (276004): RAM logic "DisplayManager:dm|Bin2HexEx:h0|Ram0" is uninferred due to inappropriate RAM size File: D:/Decagon/_PC/Desktop/SAP1/Bin2HexEx.v Line: 6
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[7]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[6]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[5]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[4]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[3]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[2]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[1]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_SAP1_w[0]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+    Warning (13048): Converted tri-state node "DQ_Con_w[7]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[6]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[5]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[4]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[3]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[2]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[1]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13048): Converted tri-state node "DQ_Con_w[0]" into a selector File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 20
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Out|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:tmp|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Areg|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Ir|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mdr|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[0]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[1]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[2]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[3]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[4]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[5]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[6]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+    Warning (13049): Converted tri-state buffer "SAP1:sap|DREgister:Mar|Q[7]" feeding internal logic into a wire File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 3
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "DisplayManager:dm|HEX5_data[0]" merged with LATCH primitive "DisplayManager:dm|HEX0_data[4]" File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+    Info (13026): Duplicate LATCH primitive "DisplayManager:dm|HEX1_data[4]" merged with LATCH primitive "DisplayManager:dm|HEX0_data[4]" File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "CE" is stuck at GND File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 10
+    Warning (13410): Pin "HEX2[0]" is stuck at VCC File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 14
+    Warning (13410): Pin "HEX2[5]" is stuck at VCC File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 14
+    Warning (13410): Pin "HEX5[3]" is stuck at VCC File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 14
+    Warning (13410): Pin "LEDR[9]" is stuck at VCC File: D:/Decagon/_PC/Desktop/SAP1/Top.v Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Decagon/_PC/Desktop/SAP1/output_files/Top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 568 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 63 output pins
+    Info (21060): Implemented 8 bidirectional pins
+    Info (21061): Implemented 482 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 4838 megabytes
+    Info: Processing ended: Sat Oct 22 02:10:38 2022
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:22
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Decagon/_PC/Desktop/SAP1/output_files/Top.map.smsg.
+
+

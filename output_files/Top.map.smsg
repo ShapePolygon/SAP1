@@ -1,0 +1,90 @@
+Info (10281): Verilog HDL Declaration information at SAP1.v(13): object "PC" differs only in case from object "Pc" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 13
+Info (10281): Verilog HDL Declaration information at SAP1.v(13): object "MAR" differs only in case from object "Mar" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 13
+Info (10281): Verilog HDL Declaration information at SAP1.v(14): object "MDR" differs only in case from object "Mdr" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 14
+Info (10281): Verilog HDL Declaration information at SAP1.v(14): object "IR" differs only in case from object "Ir" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 14
+Info (10281): Verilog HDL Declaration information at SAP1.v(14): object "AReg" differs only in case from object "Areg" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 14
+Info (10281): Verilog HDL Declaration information at SAP1.v(14): object "TMP" differs only in case from object "tmp" in the same scope File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 14
+Warning (10273): Verilog HDL warning at RAM_Controller.v(25): extended using "x" or "z" File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 25
+Warning (10273): Verilog HDL warning at RAM_Manager.v(30): extended using "x" or "z" File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 30
+Warning (10273): Verilog HDL warning at RAM_Manager.v(33): extended using "x" or "z" File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 33
+Warning (10273): Verilog HDL warning at RAM_Manager.v(35): extended using "x" or "z" File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 35
+Warning (10273): Verilog HDL warning at DRegister.v(9): extended using "x" or "z" File: D:/Decagon/_PC/Desktop/SAP1/DRegister.v Line: 9
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX0_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX1_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX2_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX3_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX4_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10240): Verilog HDL Always Construct warning at DisplayManager.v(59): inferring latch(es) for variable "HEX5_data", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 59
+Warning (10230): Verilog HDL assignment warning at InputManager.v(34): truncated value with size 10 to match size of target (8) File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 34
+Warning (10240): Verilog HDL Always Construct warning at InputManager.v(32): inferring latch(es) for variable "subMode0", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 32
+Warning (10240): Verilog HDL Always Construct warning at InputManager.v(32): inferring latch(es) for variable "subMode3", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/InputManager.v Line: 32
+Warning (10230): Verilog HDL assignment warning at SAP1.v(58): truncated value with size 32 to match size of target (8) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 58
+Warning (10230): Verilog HDL assignment warning at SAP1.v(94): truncated value with size 9 to match size of target (8) File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 94
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "userInput", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "isHalted", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Cp", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Lm", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Lmdr", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Lir", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "La", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Ltmp", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "Lout", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "bus", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "IR_H", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at SAP1.v(63): inferring latch(es) for variable "IR_L", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 63
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "CE", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "WE", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "OE", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "A", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "dataFromRAM", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at RAM_Controller.v(28): inferring latch(es) for variable "data_out", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (10230): Verilog HDL assignment warning at Counter.v(9): truncated value with size 32 to match size of target (8) File: D:/Decagon/_PC/Desktop/SAP1/Counter.v Line: 9
+Warning (10230): Verilog HDL assignment warning at ClockManager.v(26): truncated value with size 32 to match size of target (1) File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 26
+Warning (10230): Verilog HDL assignment warning at ClockManager.v(27): truncated value with size 32 to match size of target (1) File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 27
+Warning (10230): Verilog HDL assignment warning at ClockManager.v(28): truncated value with size 32 to match size of target (1) File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 28
+Warning (10230): Verilog HDL assignment warning at ClockManager.v(41): truncated value with size 32 to match size of target (1) File: D:/Decagon/_PC/Desktop/SAP1/ClockManager.v Line: 41
+Warning (10230): Verilog HDL assignment warning at UpDownCounter.v(13): truncated value with size 32 to match size of target (4) File: D:/Decagon/_PC/Desktop/SAP1/UpDownCounter.v Line: 13
+Warning (10230): Verilog HDL assignment warning at UpDownCounter.v(15): truncated value with size 32 to match size of target (4) File: D:/Decagon/_PC/Desktop/SAP1/UpDownCounter.v Line: 15
+Warning (10230): Verilog HDL assignment warning at UpDownCounter.v(16): truncated value with size 32 to match size of target (4) File: D:/Decagon/_PC/Desktop/SAP1/UpDownCounter.v Line: 16
+Warning (10240): Verilog HDL Always Construct warning at RAM_Manager.v(38): inferring latch(es) for variable "data_out_SAP", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 38
+Warning (10240): Verilog HDL Always Construct warning at RAM_Manager.v(38): inferring latch(es) for variable "data_out_Con", which holds its previous value in one or more paths through the always construct File: D:/Decagon/_PC/Desktop/SAP1/RAM_Manager.v Line: 38
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|OE" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 13
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|WE" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 13
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[0]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[1]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[2]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[3]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[4]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[5]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[6]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "SAP1:sap|RAM_Controller:rc|A[7]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/RAM_Controller.v Line: 28
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX4_data[1]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX4_data[0]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX4_data[2]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX4_data[3]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX3_data[0]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX3_data[1]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX3_data[2]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX3_data[3]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX1_data[0]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX1_data[1]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX1_data[2]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX1_data[3]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX0_data[0]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX0_data[1]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX0_data[2]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (14026): LATCH primitive "DisplayManager:dm|HEX0_data[3]" is permanently enabled File: D:/Decagon/_PC/Desktop/SAP1/DisplayManager.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[0] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[1] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[2] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[3] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[4] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[5] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[6] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|userInput[7] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|isHalted has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 22
+Warning (13012): Latch SAP1:sap|bus[0] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|bus[3] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|bus[2] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|bus[1] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68
+Warning (13012): Latch SAP1:sap|bus[4] has unsafe behavior File: D:/Decagon/_PC/Desktop/SAP1/SAP1.v Line: 68

@@ -1,0 +1,421 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'SW_input[8]'
+Slack : -9.071
+TNS   : -215.761
+
+Type  : Slow 1100mV 85C Model Setup 'SW_input[9]'
+Slack : -8.778
+TNS   : -719.328
+
+Type  : Slow 1100mV 85C Model Setup 'KEY_input[3]'
+Slack : -8.249
+TNS   : -143.559
+
+Type  : Slow 1100mV 85C Model Setup 'KEY_input[0]'
+Slack : -7.691
+TNS   : -438.112
+
+Type  : Slow 1100mV 85C Model Setup 'KEY_input[1]'
+Slack : -3.913
+TNS   : -18.990
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -2.639
+TNS   : -411.723
+
+Type  : Slow 1100mV 85C Model Hold 'KEY_input[0]'
+Slack : -2.029
+TNS   : -2.029
+
+Type  : Slow 1100mV 85C Model Hold 'SW_input[9]'
+Slack : -1.945
+TNS   : -1.945
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.376
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'KEY_input[1]'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'KEY_input[3]'
+Slack : 1.295
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'SW_input[8]'
+Slack : 1.408
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'SW_input[8]'
+Slack : -6.457
+TNS   : -50.062
+
+Type  : Slow 1100mV 85C Model Recovery 'SW_input[9]'
+Slack : -6.208
+TNS   : -437.009
+
+Type  : Slow 1100mV 85C Model Recovery 'KEY_input[0]'
+Slack : -4.992
+TNS   : -314.523
+
+Type  : Slow 1100mV 85C Model Recovery 'KEY_input[1]'
+Slack : -4.232
+TNS   : -21.147
+
+Type  : Slow 1100mV 85C Model Removal 'SW_input[8]'
+Slack : 1.441
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'KEY_input[0]'
+Slack : 1.477
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'SW_input[9]'
+Slack : 1.600
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'KEY_input[1]'
+Slack : 2.053
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW_input[9]'
+Slack : -1.304
+TNS   : -157.331
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -88.014
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY_input[0]'
+Slack : -0.394
+TNS   : -36.045
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY_input[1]'
+Slack : -0.394
+TNS   : -3.376
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'KEY_input[3]'
+Slack : -0.155
+TNS   : -2.240
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'SW_input[8]'
+Slack : 0.081
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'SW_input[8]'
+Slack : -8.818
+TNS   : -209.410
+
+Type  : Slow 1100mV 0C Model Setup 'SW_input[9]'
+Slack : -8.579
+TNS   : -701.610
+
+Type  : Slow 1100mV 0C Model Setup 'KEY_input[3]'
+Slack : -7.925
+TNS   : -137.631
+
+Type  : Slow 1100mV 0C Model Setup 'KEY_input[0]'
+Slack : -7.478
+TNS   : -424.223
+
+Type  : Slow 1100mV 0C Model Setup 'KEY_input[1]'
+Slack : -3.833
+TNS   : -18.557
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -2.559
+TNS   : -396.991
+
+Type  : Slow 1100mV 0C Model Hold 'KEY_input[0]'
+Slack : -1.851
+TNS   : -1.851
+
+Type  : Slow 1100mV 0C Model Hold 'SW_input[9]'
+Slack : -1.693
+TNS   : -1.693
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'KEY_input[1]'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'SW_input[8]'
+Slack : 1.157
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'KEY_input[3]'
+Slack : 1.215
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'SW_input[8]'
+Slack : -6.255
+TNS   : -48.360
+
+Type  : Slow 1100mV 0C Model Recovery 'SW_input[9]'
+Slack : -5.996
+TNS   : -422.414
+
+Type  : Slow 1100mV 0C Model Recovery 'KEY_input[0]'
+Slack : -4.737
+TNS   : -298.806
+
+Type  : Slow 1100mV 0C Model Recovery 'KEY_input[1]'
+Slack : -4.126
+TNS   : -20.616
+
+Type  : Slow 1100mV 0C Model Removal 'SW_input[8]'
+Slack : 1.118
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'KEY_input[0]'
+Slack : 1.228
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'SW_input[9]'
+Slack : 1.294
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'KEY_input[1]'
+Slack : 1.873
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW_input[9]'
+Slack : -1.362
+TNS   : -162.135
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.394
+TNS   : -95.732
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY_input[0]'
+Slack : -0.394
+TNS   : -37.507
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY_input[1]'
+Slack : -0.394
+TNS   : -3.411
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'KEY_input[3]'
+Slack : -0.210
+TNS   : -3.711
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'SW_input[8]'
+Slack : 0.040
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'SW_input[9]'
+Slack : -6.518
+TNS   : -490.373
+
+Type  : Fast 1100mV 85C Model Setup 'SW_input[8]'
+Slack : -5.779
+TNS   : -139.559
+
+Type  : Fast 1100mV 85C Model Setup 'KEY_input[0]'
+Slack : -5.323
+TNS   : -296.931
+
+Type  : Fast 1100mV 85C Model Setup 'KEY_input[3]'
+Slack : -4.578
+TNS   : -76.495
+
+Type  : Fast 1100mV 85C Model Setup 'KEY_input[1]'
+Slack : -3.069
+TNS   : -13.905
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.131
+TNS   : -167.743
+
+Type  : Fast 1100mV 85C Model Hold 'KEY_input[0]'
+Slack : -1.261
+TNS   : -1.261
+
+Type  : Fast 1100mV 85C Model Hold 'SW_input[9]'
+Slack : -1.111
+TNS   : -1.111
+
+Type  : Fast 1100mV 85C Model Hold 'KEY_input[1]'
+Slack : 0.150
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'KEY_input[3]'
+Slack : 0.526
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'SW_input[8]'
+Slack : 0.710
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'SW_input[8]'
+Slack : -4.421
+TNS   : -34.099
+
+Type  : Fast 1100mV 85C Model Recovery 'SW_input[9]'
+Slack : -4.386
+TNS   : -304.265
+
+Type  : Fast 1100mV 85C Model Recovery 'KEY_input[1]'
+Slack : -3.163
+TNS   : -15.810
+
+Type  : Fast 1100mV 85C Model Recovery 'KEY_input[0]'
+Slack : -3.140
+TNS   : -198.054
+
+Type  : Fast 1100mV 85C Model Removal 'KEY_input[0]'
+Slack : 0.684
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'SW_input[9]'
+Slack : 0.722
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'SW_input[8]'
+Slack : 0.832
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'KEY_input[1]'
+Slack : 1.194
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW_input[9]'
+Slack : -1.052
+TNS   : -133.615
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY_input[3]'
+Slack : -0.401
+TNS   : -14.034
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY_input[1]'
+Slack : -0.353
+TNS   : -1.853
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'KEY_input[0]'
+Slack : -0.268
+TNS   : -12.857
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'SW_input[8]'
+Slack : -0.125
+TNS   : -1.860
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.092
+TNS   : -15.096
+
+Type  : Fast 1100mV 0C Model Setup 'SW_input[9]'
+Slack : -5.751
+TNS   : -434.014
+
+Type  : Fast 1100mV 0C Model Setup 'SW_input[8]'
+Slack : -5.196
+TNS   : -125.780
+
+Type  : Fast 1100mV 0C Model Setup 'KEY_input[0]'
+Slack : -4.538
+TNS   : -252.307
+
+Type  : Fast 1100mV 0C Model Setup 'KEY_input[3]'
+Slack : -4.025
+TNS   : -66.838
+
+Type  : Fast 1100mV 0C Model Setup 'KEY_input[1]'
+Slack : -2.758
+TNS   : -12.562
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -0.946
+TNS   : -139.487
+
+Type  : Fast 1100mV 0C Model Hold 'KEY_input[0]'
+Slack : -1.178
+TNS   : -1.178
+
+Type  : Fast 1100mV 0C Model Hold 'SW_input[9]'
+Slack : -0.956
+TNS   : -0.956
+
+Type  : Fast 1100mV 0C Model Hold 'KEY_input[1]'
+Slack : 0.135
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'KEY_input[3]'
+Slack : 0.396
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'SW_input[8]'
+Slack : 0.552
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'SW_input[8]'
+Slack : -3.901
+TNS   : -30.052
+
+Type  : Fast 1100mV 0C Model Recovery 'SW_input[9]'
+Slack : -3.878
+TNS   : -268.161
+
+Type  : Fast 1100mV 0C Model Recovery 'KEY_input[1]'
+Slack : -2.793
+TNS   : -13.960
+
+Type  : Fast 1100mV 0C Model Recovery 'KEY_input[0]'
+Slack : -2.609
+TNS   : -164.333
+
+Type  : Fast 1100mV 0C Model Removal 'KEY_input[0]'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'SW_input[9]'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'SW_input[8]'
+Slack : 0.547
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'KEY_input[1]'
+Slack : 0.926
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW_input[9]'
+Slack : -0.954
+TNS   : -120.392
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY_input[3]'
+Slack : -0.369
+TNS   : -13.808
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY_input[1]'
+Slack : -0.352
+TNS   : -1.868
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'KEY_input[0]'
+Slack : -0.291
+TNS   : -14.723
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'SW_input[8]'
+Slack : -0.125
+TNS   : -1.958
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.091
+TNS   : -15.077
+
+------------------------------------------------------------
